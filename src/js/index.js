@@ -11,16 +11,16 @@
   limitations under the License.
 */
 
-var stocksGrid= null;
-var lsClient= null;
-var fieldsList = ["key", "command", "destination", "departure", "terminal", "status", "airline"];
-var fieldsListT = ["time"];
+let stocksGrid= null;
+let lsClient= null;
+let fieldsList = ["key", "command", "destination", "departure", "terminal", "status", "airline"];
+let fieldsListT = ["time"];
 
 function main() {
 
     // Connect to Lightstreamer Server
-    var protocolToUse= document.location.protocol != "file:" ? document.location.protocol : "http:";
-    var portToUse= document.location.protocol == "https:" ? LS_HTTPS_PORT : LS_HTTP_PORT;
+    let protocolToUse= document.location.protocol != "file:" ? document.location.protocol : "http:";
+    let portToUse= document.location.protocol == "https:" ? LS_HTTPS_PORT : LS_HTTP_PORT;
 
     lsClient= new Ls.LightstreamerClient(protocolToUse + "//" + LS_HOST + ":" + portToUse, "DEMO");
 
@@ -34,20 +34,20 @@ function main() {
     dynaGrid.setNodeTypes(["div","span","img","a"]);
     dynaGrid.setAutoCleanBehavior(true, false);
     dynaGrid.addListener({
-    onVisualUpdate: function(key,info) {
+    onVisualUpdate: function(_key,info) {
         if (info == null) {
         //cleaning
         return;
         }
 
-        var cold = "#efefef";
-        info.setAttribute("green", cold, "backgroundColor");
+        const cold = "#dedede";
+        info.setAttribute("lightgreen", cold, "backgroundColor");
     }
     });
 
     dynaGrid.setSort("key");
     
-    var subMonitor = new Ls.Subscription("COMMAND","DeltaDemo",fieldsList);
+    let subMonitor = new Ls.Subscription("COMMAND","DeltaDemo",fieldsList);
     subMonitor.addListener(dynaGrid);
     subMonitor.setRequestedSnapshot("yes");
     
@@ -61,14 +61,14 @@ function main() {
     timeGrid.setNodeTypes(["div","span","img","a"]);
     timeGrid.setAutoCleanBehavior(true, false);
     timeGrid.addListener({
-        onVisualUpdate: function(key,info) {
+        onVisualUpdate: function(_key,info) {
           if (info == null) {
             //cleaning
             return;
           }
           
-          var cold = "#efefef";
-          info.setAttribute("green", cold, "backgroundColor");
+          const cold = "#efefef";
+          info.setAttribute("lightgreen", cold, "backgroundColor");
         }
       });
     
