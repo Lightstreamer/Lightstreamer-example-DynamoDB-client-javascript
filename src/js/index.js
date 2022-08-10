@@ -22,7 +22,7 @@ function main() {
     let protocolToUse= document.location.protocol != "file:" ? document.location.protocol : "http:";
     let portToUse= document.location.protocol == "https:" ? LS_HTTPS_PORT : LS_HTTP_PORT;
 
-    lsClient= new Ls.LightstreamerClient(protocolToUse + "//" + LS_HOST + ":" + portToUse, "DEMO");
+    lsClient= new Ls.LightstreamerClient(protocolToUse + "//" + LS_HOST + ":" + portToUse, "DYNAMODBDEMO");
 
     lsClient.addListener(new Ls.StatusWidget("left", "0px", true));
 
@@ -47,7 +47,7 @@ function main() {
 
     dynaGrid.setSort("key");
     
-    let subMonitor = new Ls.Subscription("COMMAND","DeltaDemo",fieldsList);
+    let subMonitor = new Ls.Subscription("COMMAND","DepartureMonitor",fieldsList);
     subMonitor.addListener(dynaGrid);
     subMonitor.setRequestedSnapshot("yes");
     
@@ -72,9 +72,9 @@ function main() {
         }
       });
     
-    let timeSubscription = new Ls.Subscription("MERGE","DeltaTime",fieldsListT);
+    let timeSubscription = new Ls.Subscription("MERGE","CurrTime",fieldsListT);
     timeSubscription.addListener(timeGrid);
-    timeSubscription.setDataAdapter("DATA");
+    timeSubscription.setDataAdapter("CURRENTTIME");
     timeSubscription.setRequestedSnapshot("yes");
     
     lsClient.subscribe(timeSubscription);
