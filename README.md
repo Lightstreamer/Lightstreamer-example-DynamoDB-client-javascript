@@ -9,7 +9,7 @@ This project includes a Lightstreamer web client that subscribes to and show dat
 
 ## Details
 
-The Demo simulates a basic departure flight monitor with a few rows which represent information on flights departing from a hypothetical airport.
+The Demo simulates a basic departures board with a few rows which represent information on flights departing from a hypothetical airport.
 The data are simulated in the back-end and retrieved from an [Amazon DynamoDB](https://aws.amazon.com/en/dynamodb/) data source.
 How to retrieve this information from the DB and inject it into the Lightstreamer Server is the task of the adapter project:  [Lightstreamer - DynameDB Demo - Kotlin Adapter](https://github.com/Lightstreamer/Lightstreamer-example-DynamoDB-adapter-kotlin).
 
