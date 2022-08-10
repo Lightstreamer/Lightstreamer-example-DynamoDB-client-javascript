@@ -17,8 +17,8 @@ This page uses the [Web Client SDK API for Lightstreamer](https://lightstreamer.
 
 The demo includes the following client-side functionalities:
 
-* A [Subscription](https://lightstreamer.com/api/ls-web-client/latest/Subscription.html) containing only 1 item and 1 field, subscribed to in **MERGE** mode, and feeding a [DynaGrid](https://lightstreamer.com/api/ls-web-client/latest/DynaGrid.html) with the simulted current time (yes the time in this demo is accelerated).
-* A [Subscription](https://lightstreamer.com/api/ls-web-client/latest/Subscription.html) with a single item subscribed to in **COMMAND** mode feeding a [DynaGrid](https://lightstreamer.com/api/ls-web-client/latest/DynaGrid.html) with the curent list and status of the next departing flights (according with the simulated time).
+* A [Subscription](https://lightstreamer.com/api/ls-web-client/latest/Subscription.html) containing only 1 item and 1 field, subscribed to in **MERGE** mode, and feeding a [DynaGrid](https://lightstreamer.com/api/ls-web-client/latest/DynaGrid.html) with the simulated current time (and yes, the time in this demo is accelerated).
+* A [Subscription](https://lightstreamer.com/api/ls-web-client/latest/Subscription.html) with a single item subscribed to in **COMMAND** mode feeding a [DynaGrid](https://lightstreamer.com/api/ls-web-client/latest/DynaGrid.html) with the current list and status of the next departing flights (according with the simulated time).
 
 ## Install
 
