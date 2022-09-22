@@ -22,7 +22,7 @@ function main() {
     let protocolToUse= document.location.protocol != "file:" ? document.location.protocol : "http:";
     let portToUse= document.location.protocol == "https:" ? LS_HTTPS_PORT : LS_HTTP_PORT;
 
-    lsClient= new Ls.LightstreamerClient(protocolToUse + "//" + LS_HOST + ":" + portToUse, "DYNAMODBDEMO");
+    lsClient= new Ls.LightstreamerClient(protocolToUse + "//" + LS_HOST + ":" + portToUse, LS_ADAPTER_SET);
 
     lsClient.addListener(new Ls.StatusWidget("left", "0px", true));
 
