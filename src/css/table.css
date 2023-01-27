@@ -31,6 +31,27 @@
   overflow-x:auto;
   margin-top: 1em;
 }
+.bannerimage {
+  width: 100%;
+  background-image: url('../images/banner.png');
+  height: 55px;
+  background-color: rgb(7, 80, 59);
+  background-position: center;
+  font-family: "Amazon Ember", Arial, Helvetica, Sans-serif;
+  font-size: x-large;
+  color: #063d27;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 115px;
+}
+
+.overlaylogo {
+  position: fixed;
+  left: 50%;
+  top: 25px;
+  margin-left: -200px;
+  /* Negative half of width. */
+}
 .app-header { 
   color: white; 
   text-align: center; 
