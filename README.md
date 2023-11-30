@@ -34,6 +34,8 @@ The client demo configuration assumes that Lightstreamer Server, Lightstreamer A
 
 ## See Also
 
+* Our blog post: [Virtual Airport Demo: Connecting DynamoDB to Lightstreamer](https://blog.lightstreamer.com/2023/01/virtual-airport-demo-connecting.html)
+
 ### Lightstreamer Adapters Needed by This Client
 
 * [Lightstreamer - DynameDB Demo - Kotlin Adapter](https://github.com/Lightstreamer/Lightstreamer-example-DynamoDB-adapter-kotlin)
